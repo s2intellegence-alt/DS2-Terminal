@@ -19,3 +19,5 @@ jobs:
         with:
           name: DS2-Terminal-Package
           path: app/build/outputs/apk/debug/app-debug.apk
+- name: Build APK
+        run: ./gradlew clean assembleDebug
