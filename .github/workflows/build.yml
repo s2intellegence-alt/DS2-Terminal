@@ -10,12 +10,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Force Gradle Wrapper
-        run: |
-          if [ ! -f gradlew ]; then
-            gradle wrapper
-          fi
-          chmod +x gradlew
+      - name: Build Gradle Wrapper
+        run: gradle wrapper # This generates the missing engine
       - name: Build APK
         run: ./gradlew assembleDebug
       - name: Upload Binary
