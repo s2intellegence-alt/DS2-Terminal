@@ -1,9 +1,7 @@
-apply plugin: 'java'
-
-repositories {
-    mavenCentral()
+buildscript {
+    repositories { google(); mavenCentral() }
+    dependencies { classpath 'com.android.tools.build:gradle:8.2.0' }
 }
-
-dependencies {
-    // Add your dependencies here
+allprojects {
+    repositories { google(); mavenCentral() }
 }
